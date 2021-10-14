@@ -10,6 +10,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { Button } from "@material-ui/core"
 
 function Sidebar() {
     return (
@@ -25,6 +26,8 @@ function Sidebar() {
             <SidebarOption Icon={ListAltIcon} text="Lists"/>
             <SidebarOption Icon={PermIdentityIcon} text="Profile"/>
             <SidebarOption Icon={MoreHorizIcon} text="More"/>
+
+            <Button variant="outlined" className="sidebar_tweet" fullWidth >Tweet</Button>
             
         </div>
     )
