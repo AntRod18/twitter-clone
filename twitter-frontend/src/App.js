@@ -1,13 +1,14 @@
 import './App.css';
-import {Component} from "react"
+import React from "react"
+import Sidebar from './Sidebar';
 
-class App extends Component {
+class App extends React.Component {
   render(){
   return (
     <div className="app">
       <h1> Yo Yo</h1>
 
-      {/* {Sidebar} */}
+      <Sidebar />
 
       {/* {Feed} */}
 
