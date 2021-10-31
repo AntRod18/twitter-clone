@@ -7,6 +7,9 @@
     border-right: 1px solid var(--twitter-background);
     min-width: fit-content;
     overflow-y: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .feed__header {
