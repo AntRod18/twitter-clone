@@ -2,6 +2,7 @@ import './App.css';
 import React from "react"
 import Sidebar from './Sidebar';
 import Feed from './Feed';
+import Widgets from './Widgets';
 
 class App extends React.Component {
   render(){
@@ -9,7 +10,7 @@ class App extends React.Component {
     <div className="app">
       <Sidebar />
       <Feed />
-      {/* {Widgets} */}
+      <Widgets />
     </div>
   );
   }
