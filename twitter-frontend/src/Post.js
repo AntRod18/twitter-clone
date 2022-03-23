@@ -24,10 +24,14 @@ function Post({displayName, userName, verified, text, image, avatar}) {
                     </div>
                     <div className="post__headerDescription">
                         <p>
-                            How is everyone doing today?
+                            Hey guys today is going to be a great day!
                         </p>
                     </div>
                 </div>
+                <img
+                src='https://media.giphy.com/media/MARFSIQQNQVWw/giphy.gif'
+                alt='allmightgif'
+                />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
