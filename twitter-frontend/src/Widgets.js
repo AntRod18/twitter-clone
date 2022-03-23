@@ -5,11 +5,26 @@ import {
     TwitterShareButton,
     TwitterTweetEmbed
 } from 'react-twitter-embed'
+import SearchIcon from '@mui/icons-material/Search';
 
 function Widgets() {
     return (
         <div className="widgets">
-            <h2>Widgets</h2>
+            <div className='widgets__input'>
+                <SearchIcon className="widgets__searchIcon" />
+                <input placeholder='SearchTwitter' type='text' />
+            </div>
+            <div className='widgets__widgetContainer'>
+                <h2>What's happening</h2>
+
+                <TwitterTweetEmbed tweetId={'1506617005272576001'} />
+
+                <TwitterTimelineEmbed
+                sourceType='profile'
+                screenName='Crunchyroll'
+                options={{ height: 400 }}
+                />
+            </div>
         </div>
     )
 }
