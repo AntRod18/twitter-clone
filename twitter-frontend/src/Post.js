@@ -11,26 +11,27 @@ function Post({displayName, userName, verified, text, image, avatar}) {
     return (
         <div className="post">
             <div className="post_avatar">
-                <Avatar src="https://media.comicbook.com/2021/04/my-hero-academia-308-spoilers-izuku-deku-ofa-full-powers-reveale-1264224.jpeg?auto=webp&width=1200&height=669&crop=1200:669,smart" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Anthony <span>
-                                <VerifiedIcon className="post__badge"/>
+                            {displayName}{" "}
+                            <span>
+                                {verified && <VerifiedIcon className="post__badge"/>} @{userName}
                             </span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
                         <p>
-                            Hey guys today is going to be a great day!
+                            {text}
                         </p>
                     </div>
                 </div>
                 <img
-                src='https://media.giphy.com/media/MARFSIQQNQVWw/giphy.gif'
-                alt='allmightgif'
+                src={image}
+                alt=''
                 />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
