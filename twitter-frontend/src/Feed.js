@@ -3,23 +3,26 @@ import './Feed.css';
 import TweetBox from './TweetBox';
 import Post from './Post'
 import db from './firebase'
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import {collection, onSnapshot, query, QuerySnapshot } from "firebase/firestore";
 
 
 function Feed() {
     const [posts, setPosts] = useState([])
-
-    
-
-    const getPosts = async() => {
-        const querySnapshot = await getDocs(collection(db, "posts"));
-        querySnapshot.forEach((doc) => {
-            setPosts([doc.data()])
-        })
-    }
+    // const getPosts = () => {
+    //     const u = 
+    //     })
+    //     // console.log(q)
+    //     // querySnapshot.forEach((doc) => {
+    //     //     setPosts([doc.data()])
+    //     // })
+    // }
+    // const q = query(collection(db, "posts"))
 
     useEffect(() => {
-        getPosts()
+        onSnapshot(collection(db, "posts"), (snapshot) => {
+            setPosts(snapshot.docs.map((doc) => doc.data()))
+        })
+        console.log(posts)
     },[])
 
     return (
